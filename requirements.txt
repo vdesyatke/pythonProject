@@ -8,7 +8,7 @@ itsdangerous
 Jinja2
 joblib
 MarkupSafe
-numpy
+# numpy
 packaging
 # scikit-learn
 # scipy
