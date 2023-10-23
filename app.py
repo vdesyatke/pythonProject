@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
-from sklearn import tree
-from sklearn.multioutput import MultiOutputRegressor
+# from sklearn import tree
+# from sklearn.multioutput import MultiOutputRegressor
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def predict():
         v_w = request.form.get('VW')
         f_p = request.form.get('FP')
         
-        print(i_w, i_f)
+        # print(i_w, i_f)
         
         inp = [[float(i_w), float(i_f), float(v_w), float(f_p)]]
 
@@ -34,4 +34,4 @@ def predict():
 def print_text():
     return '<h1>Some text</h1'
 
-app.run()
+# app.run()
