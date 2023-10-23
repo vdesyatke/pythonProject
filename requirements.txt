@@ -10,8 +10,8 @@ joblib
 MarkupSafe
 numpy
 packaging
-scikit-learn
-scipy
+# scikit-learn
+# scipy
 threadpoolctl
 Werkzeug
 zipp
