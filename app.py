@@ -21,7 +21,7 @@ def predict():
         inp = scaler.transform(inp)
         predict = model.predict(inp)
 
-    return render_template('index.html')
+    return render_template('/Templates/index.html')
 
 
 @app.route('/text/')
