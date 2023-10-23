@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
+from sklearn import tree
+from sklearn.multioutput import MultiOutputRegressor
 
 app = Flask(__name__)
 
@@ -15,10 +17,10 @@ def predict():
         
         inp = [[float(i_w), float(i_f), float(v_w), float(f_p)]]
 
-        with open("/models/welding_seam_model.pkl", "rb") as f:
+        with open("welding_seam_model.pkl", "rb") as f:
             model = pickle.load(f)
 
-        with open("/models/welding_seam_scaler.pkl", "rb") as f:
+        with open("welding_seam_scaler.pkl", "rb") as f:
             scaler = pickle.load(f)
 
         inp = scaler.transform(inp)
@@ -32,4 +34,4 @@ def predict():
 def print_text():
     return '<h1>Some text</h1'
 
-# app.run()
+app.run()
