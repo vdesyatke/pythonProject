@@ -39,4 +39,4 @@ def print_text():
     return '<h1>Some text</h1'
 
 
-app.run()
+# app.run()
